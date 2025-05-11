@@ -1,30 +1,30 @@
 'use client';
 
-import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { useRef } from 'react';
 
 // Dynamically import html2pdf.js with SSR disabled
-const html2pdf: any = dynamic(() => import('html2pdf.js'), { ssr: false });
+// const html2pdf: any = dynamic(() => import('html2pdf.js'), { ssr: false });
 
 export default function MyCVPage() {
   const cvRef = useRef<HTMLDivElement>(null);
 
-  const handleDownloadPDF = async () => {
-    if (cvRef.current) {
-      const element = cvRef.current;
-      const options = {
-        margin: 0,
-        filename: 'MyCV.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-      };
+  //   const handleDownloadPDF = async () => {
+  //     if (cvRef.current) {
+  //       const element = cvRef.current;
+  //       const options = {
+  //         margin: 0,
+  //         filename: 'MyCV.pdf',
+  //         image: { type: 'jpeg', quality: 0.98 },
+  //         html2canvas: { scale: 2 },
+  //         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+  //       };
 
-      // Use the imported html2pdf function directly
-      const html2pdfInstance = await html2pdf;
-      html2pdfInstance().set(options).from(element).save();
-    }
-  };
+  //       // Use the imported html2pdf function directly
+  //       const html2pdfInstance = await html2pdf;
+  //       html2pdfInstance().set(options).from(element).save();
+  //     }
+  //   };
 
   return (
     <div>
@@ -41,11 +41,14 @@ export default function MyCVPage() {
         {/* Left Sidebar */}
         <aside className="bg-gray-900 text-white p-6 lg:w-1/3">
           <div className="text-center">
-            <img
-              src="https://avatars.githubusercontent.com/u/62162620?v=4"
+            <Image
+              src="/avt.jpg"
+              width={128}
+              height={128}
+              className="w-32 h-32 mx-auto rounded-full mb-4 object-cover"
               alt="Profile"
-              className="w-32 h-32 mx-auto rounded-full mb-4"
             />
+
             <h1 className="text-2xl font-bold">Lâm Quang Vinh</h1>
             <p className="text-sm">.NET Backend Developer</p>
           </div>
