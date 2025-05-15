@@ -4,6 +4,7 @@ interface ProjectItemProps {
   description: string;
   technologies?: string;
   duration?: string;
+  locale: string; // Add locale as a prop
 }
 
 export default function ProjectItem({
@@ -11,7 +12,8 @@ export default function ProjectItem({
   link,
   description,
   technologies,
-  duration
+  duration,
+  locale
 }: ProjectItemProps) {
   return (
     <div className="mt-6">
@@ -20,16 +22,21 @@ export default function ProjectItem({
         {link}
       </a>
       <p className="text-sm mt-2">
-        <strong>Description:</strong> {description}
+        <strong>{locale === 'en' ? 'Description:' : 'Mô tả:'}</strong>{' '}
+        {description}
       </p>
       {technologies && (
         <p className="text-sm mt-2">
-          <strong>Technologies Used:</strong> {technologies}
+          <strong>
+            {locale === 'en' ? 'Technologies Used:' : 'Công nghệ sử dụng:'}
+          </strong>{' '}
+          {technologies}
         </p>
       )}
       {duration && (
         <p className="text-sm mt-2">
-          <strong>Duration:</strong> {duration}
+          <strong>{locale === 'en' ? 'Duration:' : 'Thời gian:'}</strong>{' '}
+          {duration}
         </p>
       )}
     </div>
