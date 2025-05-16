@@ -16,13 +16,17 @@ export default function PersonalProjects() {
             title: 'LETOS',
             link: 'https://letossafety.vn/',
             description:
-              'Trang web giới thiệu sản phẩm, tối ưu hoá SEO, kết nối với các sàn thương mại điện tử, đồng bộ tồn kho, quản lí đơn hàng từ tiktok, shopee, lazada, ...'
+              'Trang web giới thiệu sản phẩm, tối ưu hoá SEO, kết nối với các sàn thương mại điện tử, đồng bộ tồn kho, quản lí đơn hàng từ tiktok, shopee, lazada, ... Hỗ trợ doanh nghiệp kết nối với các sàn thương mại điện tử!',
+            technologies: '.NET, SQL, Stored Procedures',
+            duration: 'Tháng 11/2024 - Hiện tại'
           },
           {
             title: 'Thuật toán',
             link: 'https://github.com/VinhLam2512/Algorithm',
             description:
-              'Một trong những hoạt động trong cộng đồng WeCommit100x của tôi là tham gia các thử thách LeetCode hàng ngày với những người khác, nơi chúng tôi cùng nhau giải quyết vấn đề và chia sẻ giải pháp.'
+              'Dự án luyện tập thuật toán, làm các bài thuật toán hàng ngày trên LeetCode',
+            technologies: 'C#, Python, Javascript',
+            duration: 'Tháng 08/2024 - Hiện tại'
           },
           {
             title: 'Base Project',
@@ -46,13 +50,17 @@ export default function PersonalProjects() {
             title: 'LETOS',
             link: 'https://letossafety.vn/',
             description:
-              'A product showcase website optimized for SEO, integrated with e-commerce platforms, synchronized inventory, and managed orders from TikTok, Shopee, Lazada, and more.'
+              'A product showcase website with SEO optimization, integration with e-commerce platforms, inventory synchronization, and order management from TikTok, Shopee, Lazada, etc. Supports businesses in connecting with e-commerce platforms!',
+            technologies: '.NET, SQL, Stored Procedures',
+            duration: 'November 2024 - Present'
           },
           {
             title: 'Algorithm',
             link: 'https://github.com/VinhLam2512/Algorithm',
             description:
-              'One of the activities in my WeCommit100x community involves participating in daily LeetCode challenges with others, where we collaborate to solve problems and share our solutions.'
+              'A project for practicing algorithms by solving daily problems on LeetCode.',
+            technologies: 'C#, Python, JavaScript',
+            duration: 'August 2024 - Present'
           },
           {
             title: 'Base Project',

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { useParams } from 'next/navigation';
 
 export default function Sidebar() {
@@ -17,7 +18,8 @@ export default function Sidebar() {
             'Giải quyết vấn đề',
             'Khả năng học hỏi',
             'Tối ưu SQL',
-            '.NET'
+            '.NET',
+            'NextJs'
           ],
           links: {
             linkedin: 'LinkedIn',
@@ -43,7 +45,8 @@ export default function Sidebar() {
             'Problem Solving',
             'Ability to Learn',
             'SQL Optimization',
-            '.NET'
+            '.NET',
+            'NextJs'
           ],
           links: {
             linkedin: 'LinkedIn',
@@ -107,20 +110,24 @@ export default function Sidebar() {
         </h2>
         <ul className="mt-2 space-y-2 text-sm">
           <li>
-            <a
+            <Link
               href="https://www.linkedin.com/in/lqvinh2512"
               className="text-blue-400 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {data.links.linkedin}
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="https://github.com/VinhLam2512"
               className="text-blue-400 hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {data.links.github}
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

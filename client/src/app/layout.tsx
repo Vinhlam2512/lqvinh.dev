@@ -13,8 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'lqvinh',
-  description: 'lqvinh'
+  title: 'Lâm Quang Vinh - Backend Developer',
+  description:
+    'Portfolio and CV of Lâm Quang Vinh, a skilled Backend Developer specializing in .NET and modern web technologies.',
+  keywords:
+    'Lâm Quang Vinh, Backend Developer, .NET, Portfolio, CV, Software Engineer',
+  viewport: 'width=device-width, initial-scale=1.0',
+  robots: 'index, follow'
 };
 
 export default function RootLayout({
