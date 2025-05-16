@@ -1,9 +1,15 @@
 import Project from './Project';
 
+interface TechStackItem {
+  title: string;
+  description: string;
+}
+
 interface CompanyProps {
   name: string;
   duration: string;
   role: string;
+  techStack: TechStackItem[]; // Add techStack for the company
   projects: {
     title: string;
     description: string;
@@ -17,8 +23,9 @@ interface CompanyProps {
 export default function Company({
   name,
   duration,
-  projects,
   role,
+  techStack,
+  projects,
   locale
 }: CompanyProps) {
   return (
@@ -28,6 +35,18 @@ export default function Company({
       <p className="text-sm mt-2">
         <strong>{locale === 'en' ? 'Role:' : 'Vai trò:'}</strong> {role}
       </p>
+      <div className="text-sm mt-2">
+        <strong>
+          {locale === 'en' ? 'Tech Stack:' : 'Công nghệ sử dụng:'}
+        </strong>
+        <ul className="list-disc list-inside mt-2">
+          {techStack.map((tech, index) => (
+            <li key={index}>
+              <strong>{tech.title}:</strong> {tech.description}
+            </li>
+          ))}
+        </ul>
+      </div>
       <div className="pl-5">
         {projects.map((project, index) => (
           <Project
